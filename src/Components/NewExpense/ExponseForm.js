@@ -66,7 +66,7 @@ const [enteredamount,setAmount]= useState('');
         const ExpenseObject ={
             title:enteredtitle,
             date:new Date(entereddata),
-            amount:enteredamount,
+            amount:+enteredamount,
         }
         props.PassFrChiledToPar(ExpenseObject)
        // console.log(ExpenseObject);
