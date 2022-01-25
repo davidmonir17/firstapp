@@ -58,7 +58,9 @@ const [enteredamount,setAmount]= useState('');
         //#endregion
         setDate(event.target.value);
     }
-    
+    const CanceledHandler=()=>{
+        props.IfCanceled();
+    }
     const submitHandler=(event) =>{
         event.preventDefault();
         const ExpenseObject ={
@@ -100,6 +102,7 @@ const [enteredamount,setAmount]= useState('');
                 </div>
             </div>
             <div className='new-expense__actions'>
+                <button onClick={CanceledHandler} >Canceled</button>
                 <button type='submit'>Add Expense</button>
             </div>
         </form>

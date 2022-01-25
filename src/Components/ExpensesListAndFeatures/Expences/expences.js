@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import Card from '../Card/Card'
+import Card from '../../ExpenseComponent/Card/Card'
 import ExpenseItem from '../expenceItem/ExpenseItems'
 import ExpensesFilter from '../ExpenseFilter/ExpenseFilter'
+import ExpensesList from '../ExpensesList/ExpensesList'
 import './Expences.css'
 
 const Expences = (props) => {
@@ -20,20 +21,14 @@ const Expences = (props) => {
 
  }
     return (
-        <div>
+        <li>
         <Card className="expenses">
             <ExpensesFilter  val={selectedTime} onSelctChange={FilterSelcHandler}/>
-             {
-                filteredExpenses.length==0?(<p>No Items Here!</p>):(
-               filteredExpenses.map((expen,index)=>{
- 
-                    return <ExpenseItem  key={index} title={expen.title} amount={ expen.amount} date={ expen.date}></ExpenseItem>
-                }
-                ))
-             }
+        { console.log(filteredExpenses)}
+             <ExpensesList items={filteredExpenses}/>
             
         </Card>
-        </div>
+        </li>
     )
 }
 

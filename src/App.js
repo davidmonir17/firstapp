@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import ExpenseItem from './Components/expenceItem/ExpenseItems';
-import Expences from './Components/Expences/expences';
+import Expences from './Components/ExpensesListAndFeatures/Expences/expences';
 import NewExpense from './Components/NewExpense/NewExpense';
 
 
